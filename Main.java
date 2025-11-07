@@ -1,10 +1,10 @@
 
-import geometrical_shapes.*;
-
+import  geometrical_shapes.*; 
+import java.awt.image.*;
 
 
 interface Displayable {
-    void display(int x, int y, Color color);
+    // void display(int x, int y, Color color);
     void save(String string);
 }
 
