@@ -6,10 +6,6 @@ import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 
-import java.awt.Graphics2D;
-// void display(int x, int y, Color color);
-// void save(String string);
-
 public class Image implements Displayable {
 
     public int width;
@@ -17,13 +13,8 @@ public class Image implements Displayable {
     private BufferedImage image;
 
     public Image(int width, int height) {
-        BufferedImage bufferedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
-         for (int y = 0; y < height; y++) {
-            for (int x = 0; x < width; x++) {
-                bufferedImage.setRGB(x, y, Color.BLACK.getRGB());
-            }
-        }
-        this.image = bufferedImage;
+
+        this.image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
         this.width = width;
         this.height = height;
 
