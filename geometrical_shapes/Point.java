@@ -33,14 +33,5 @@ public class Point implements Drawable {
         displayable.display(this.x, this.y, this.color);
     }
 
-    public Color getColor() {
-
-        Random random = new Random();
-        int r = random.nextInt(255);
-        int g = random.nextInt(255);
-        int b = random.nextInt(255);
-
-        return new Color(r, g, b);
-    }
 
 }

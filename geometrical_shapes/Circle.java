@@ -3,7 +3,7 @@ package geometrical_shapes;
 import java.util.Random;
 import java.awt.Color;
 
-public class Circle {
+public class Circle implements Drawable {
 
     public int radius;
     public Point center;
@@ -42,31 +42,5 @@ public class Circle {
         }
     }
 
-    public Color getColor() {
-
-        Random random = new Random();
-        int r = random.nextInt(255);
-        int g = random.nextInt(255);
-        int b = random.nextInt(255);
-
-        return new Color(r, g, b);
-    }
-
 }
 
-// x = cx + r * cos(θ) and y = cy + r * sin(θ)
-// teta will be starting from 0 to 2PI
-// impl Drawable for Circle {
-// fn draw(&self, image: &mut Image) {
-// let perimter = 2.0 * PI * (self.radius as f64);
-// let steps = (2.0 * PI) / (perimter as f64);
-// let mut i: f64 = 0.0;
-// let color = Circle::color();
-// while i <=2.0*PI {
-// let x = (self.center.x as f64) + (self.radius as f64) * i.cos();
-// let y = (self.center.y as f64) + (self.radius as f64) * i.sin();
-// image.display(x.round() as i32, y.round() as i32, color.clone());
-// i += steps;
-// }
-// }
-// }

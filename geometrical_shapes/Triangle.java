@@ -5,11 +5,12 @@ import java.awt.Color;
 import java.util.Random;
 
 
-public class Triangle {
+public class Triangle implements Drawable {
 
     public Point p1;
     public Point p2;
     public Point p3;
+    private Color color ; 
 
     public Triangle() {
         this(new Point(), new Point(), new Point());
@@ -19,6 +20,7 @@ public class Triangle {
         this.p1 = p1;
         this.p2 = p2;
         this.p3 = p3;
+        this.color = getColor(); 
     }
 
     public void draw(Displayable displayable) {
@@ -30,17 +32,9 @@ public class Triangle {
         };
 
         for (Line line : lines) {
+            line.color = this.color; 
             line.draw(displayable);
         }
     }
 
-    public Color getColor() {
-
-        Random random = new Random();
-        int r = random.nextInt(255);
-        int g = random.nextInt(255);
-        int b = random.nextInt(255);
-
-        return new Color(r, g, b);
-    }
 }

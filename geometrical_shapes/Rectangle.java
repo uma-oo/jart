@@ -3,7 +3,7 @@ package geometrical_shapes;
 import java.awt.Color;
 import java.util.Random;
 
-public class Rectangle {
+public class Rectangle  implements Drawable{
 
     public Point p1;
     public Point p2;
@@ -31,14 +31,6 @@ public class Rectangle {
         }
     }
 
-    public Color getColor() {
 
-        Random random = new Random();
-        int r = random.nextInt(255);
-        int g = random.nextInt(255);
-        int b = random.nextInt(255);
-
-        return new Color(r, g, b);
-    }
 
 }
