@@ -1,13 +1,12 @@
 package geometrical_shapes;
 
 import java.awt.Color;
-import java.util.Random;
 
 public class Rectangle  implements Drawable{
 
-    public Point p1;
-    public Point p2;
-    public Color color; 
+    private Point p1;
+    private Point p2;
+    private Color color; 
 
     public Rectangle(Point p1, Point p2) {
         this.p1 = p1;
@@ -15,6 +14,7 @@ public class Rectangle  implements Drawable{
         this.color = getColor(); 
     }
 
+    @Override
     public void draw(Displayable displayable) {
 
         // displayable.display();

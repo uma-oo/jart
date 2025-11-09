@@ -2,14 +2,14 @@
 package geometrical_shapes;
 
 import java.awt.Color;
-import java.util.Random;
+
 
 
 public class Triangle implements Drawable {
 
-    public Point p1;
-    public Point p2;
-    public Point p3;
+    private Point p1;
+    private Point p2;
+    private Point p3;
     private Color color ; 
 
     public Triangle() {
@@ -22,7 +22,8 @@ public class Triangle implements Drawable {
         this.p3 = p3;
         this.color = getColor(); 
     }
-
+    
+    @Override
     public void draw(Displayable displayable) {
 
         Line[] lines = {

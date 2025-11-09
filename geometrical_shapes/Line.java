@@ -1,12 +1,12 @@
 package geometrical_shapes;
 
 import java.awt.Color;
-import java.util.Random;
+
 
 public class Line  implements Drawable{
 
-    public Point p1;
-    public Point p2;
+    private Point p1;
+    private Point p2;
     public Color color;
 
     public Line() {
@@ -37,7 +37,8 @@ public class Line  implements Drawable{
         }
         return generatedPoints;
     }
-
+    
+    @Override
     public void draw(Displayable displayable) {
         for (Point point : this.getPoints()) {
             point.color = this.color;

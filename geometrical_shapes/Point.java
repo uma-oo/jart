@@ -29,6 +29,7 @@ public class Point implements Drawable {
 
     }
 
+    @Override
     public void draw(Displayable displayable) {
         displayable.display(this.x, this.y, this.color);
     }
