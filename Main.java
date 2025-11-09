@@ -12,7 +12,9 @@ public class Main {
         rectangle.draw(image);
         Triangle triangle = new Triangle(new Point(100, 100), new Point(900, 900), new Point(100, 900));
         triangle.draw(image);
-
+        
+        // Cube cube = new Cube(new Point(150, 150), 100); 
+        // cube.draw(image);
         for (int i = 0; i < 50; i++) {
             Circle circle = Circle.random(image.getWidth(), image.getHeight());
             circle.draw(image);
